@@ -1,9 +1,10 @@
 import { styled } from 'solid-styled-components';
 import { Link } from 'solid-app-router';
+import Layout from './Layout';
 
 const Navigation = () => {
   return (
-    <NavContainer>
+    <Layout>
       <Link href="/first-component">
         <ButtonNav type="button">First Component</ButtonNav>
       </Link>
@@ -14,19 +15,9 @@ const Navigation = () => {
       <ButtonNav type="button">Effect</ButtonNav>
       <ButtonNav type="button">TODO</ButtonNav>
       <ButtonNav type="button">Other</ButtonNav>
-    </NavContainer>
+    </Layout>
   );
 };
-
-const NavContainer = styled('div')`
-  display: flex;
-  max-width: 50%;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  flex-direction: column;
-  margin: 40% auto;
-`;
 
 const ButtonNav = styled('button')`
   height: 50px;

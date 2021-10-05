@@ -1,6 +1,8 @@
 import { Link } from 'solid-app-router';
 import { Component, createSignal } from 'solid-js';
 import { styled } from 'solid-styled-components';
+import GoBack from './GoBack';
+import Layout from './Layout';
 
 const Increment: Component = () => {
   const [getCount, setCount] = createSignal(0);
@@ -12,28 +14,28 @@ const Increment: Component = () => {
   const reset = () => setCount(0);
 
   return (
-    <IncrementStyleContainer>
-      <p>
-        The current count is: <span>{getCount()}</span>
-      </p>
-      <ButtonContainer>
-        <Button onClick={increment} type="button">
-          {' '}
-          ✚{' '}
-        </Button>
-        <Button onClick={decrement} type="button">
-          {' '}
-          −{' '}
-        </Button>
-        <Button onClick={reset} type="button">
-          {' '}
-          ⛔️{' '}
-        </Button>
-      </ButtonContainer>
-      <Link class="back-button" href="/">
-        Go Back
-      </Link>
-    </IncrementStyleContainer>
+    <Layout>
+      <IncrementStyleContainer>
+        <p>
+          The current count is: <span>{getCount()}</span>
+        </p>
+        <ButtonContainer>
+          <Button onClick={increment} type="button">
+            {' '}
+            ✚{' '}
+          </Button>
+          <Button onClick={decrement} type="button">
+            {' '}
+            −{' '}
+          </Button>
+          <Button onClick={reset} type="button">
+            {' '}
+            ⛔️{' '}
+          </Button>
+        </ButtonContainer>
+        <GoBack />
+      </IncrementStyleContainer>
+    </Layout>
   );
 };
 
