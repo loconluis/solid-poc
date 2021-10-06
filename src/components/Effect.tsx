@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, JSX } from 'solid-js';
+import { Component, createEffect, createSignal, onCleanup } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import GoBack from './GoBack';
 import Layout from './Layout';
@@ -18,6 +18,8 @@ const Effect: Component = () => {
   createEffect(() => {
     return handleTextChangeForTitle();
   });
+
+  onCleanup(() => (document.title = 'Solid App '));
 
   return (
     <Layout>
