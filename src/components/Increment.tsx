@@ -20,13 +20,13 @@ const Increment: Component = () => {
           The current count is: <span>{getCount()}</span>
         </p>
         <ButtonContainer>
-          <Button onClick={increment} type="button">
-            {' '}
-            ✚{' '}
-          </Button>
           <Button onClick={decrement} type="button">
             {' '}
             −{' '}
+          </Button>
+          <Button onClick={increment} type="button">
+            {' '}
+            ✚{' '}
           </Button>
           <Button onClick={reset} type="button">
             {' '}

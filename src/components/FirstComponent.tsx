@@ -1,4 +1,4 @@
-import { Component, createEffect } from 'solid-js';
+import { Component, onMount } from 'solid-js';
 import Prismjs from 'prismjs';
 import { styled } from 'solid-styled-components';
 import Layout from '../components/Layout';
@@ -6,10 +6,11 @@ import GoBack from './GoBack';
 
 const FirstComponent: Component = () => {
   const code = `
+  // FirstComponent.tsx <-- File
+  
   import { Component } from 'solid-js';
-  import Prismjs from 'prismjs';
+
   const FirstComponent: Component = () => {
-    createEffect(() => Prismjs.highlightAll());
     return (
       <div>
         <div>Hey Im a Component. That's Crazy Bro!</div>
@@ -21,7 +22,7 @@ const FirstComponent: Component = () => {
 
   `;
 
-  createEffect(() => Prismjs.highlightAll());
+  onMount(() => Prismjs.highlightAll());
   return (
     <Layout>
       <MainContainer>Hey I'm a Component. That's Crazy Bro!</MainContainer>

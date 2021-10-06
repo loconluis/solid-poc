@@ -8,12 +8,18 @@ const Navigation = () => {
       <Link href="/first-component">
         <ButtonNav type="button">First Component</ButtonNav>
       </Link>
-      <Link href="/increment">
-        <ButtonNav type="button">Increment</ButtonNav>
+      <Link href="/signal">
+        <ButtonNav type="button">CreateSignal</ButtonNav>
       </Link>
-      <ButtonNav type="button">Signal</ButtonNav>
-      <ButtonNav type="button">Effect</ButtonNav>
-      <ButtonNav type="button">TODO</ButtonNav>
+      <Link href="/effect">
+        <ButtonNav type="button">Effect</ButtonNav>
+      </Link>
+      <Link href="/store">
+        <ButtonNav type="button">CreateStore</ButtonNav>
+      </Link>
+      <Link href="/todo">
+        <ButtonNav type="button">Todo</ButtonNav>
+      </Link>
       <ButtonNav type="button">Other</ButtonNav>
     </Layout>
   );

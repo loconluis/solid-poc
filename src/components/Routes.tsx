@@ -11,8 +11,12 @@ const routes = [
     component: lazy(() => import('./FirstComponent')),
   },
   {
-    path: '/increment',
+    path: '/signal',
     component: lazy(() => import('./Increment')),
+  },
+  {
+    path: '/effect',
+    component: lazy(() => import('./Effect')),
   },
 ];
 
