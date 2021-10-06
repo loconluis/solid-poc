@@ -18,6 +18,22 @@ const routes = [
     path: '/effect',
     component: lazy(() => import('./Effect')),
   },
+  {
+    path: '/store',
+    component: lazy(() => import('./CreateStore')),
+  },
+  // {
+  //   path: '/memo',
+  //   component: lazy(() => import('./Memo')),
+  // },
+  // {
+  //   path: '/todo',
+  //   component: lazy(() => import('./TodoApp')),
+  // },
+  // {
+  //   path: '/fetch',
+  //   component: lazy(() => import('./Fetch')),
+  // },
 ];
 
 const RoutesProvider = () => {

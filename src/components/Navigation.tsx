@@ -17,10 +17,15 @@ const Navigation = () => {
       <Link href="/store">
         <ButtonNav type="button">CreateStore</ButtonNav>
       </Link>
+      <Link href="/memo">
+        <ButtonNav type="button">Memo</ButtonNav>
+      </Link>
       <Link href="/todo">
         <ButtonNav type="button">Todo</ButtonNav>
       </Link>
-      <ButtonNav type="button">Other</ButtonNav>
+      <Link href="/fetch">
+        <ButtonNav type="button">Fetch an API</ButtonNav>
+      </Link>
     </Layout>
   );
 };
